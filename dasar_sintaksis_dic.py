@@ -21,3 +21,14 @@ print(users['name'])
 print(users['username'])
 print(users['email'])
 print(users['address']['geo'])
+
+print(users)
+print(type(users))
+print('\nUbah dict ke json')
+import json
+result = json.dumps(users)
+print(type(result))
+print(result)
+
+with open('result.json','w') as file:
+    json.dump(users,file)
